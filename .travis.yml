@@ -21,12 +21,13 @@ addons:
 cache:
   directories:
     - /tmp/liftoff
-arch:
-  - amd64
-  - ppc64le
-matrix:
+
+ matrix:
     include:
-      -env: DIST=juno
+      - env: DIST=juno
+        arch: amd64
+      - env: DIST=juno
+        arch: ppc64le
 
 install:
   - npm i -g @elementaryos/houston
